@@ -20,7 +20,7 @@ ui <- fluidPage(
                sidebarPanel(
                  sliderInput(
                    inputId = "r1",
-                   label = "r1 (m):",
+                   label = "Radius area 1 (m):",
                    min = 500,
                    max = 1500,
                    value = 1000,
@@ -29,7 +29,7 @@ ui <- fluidPage(
                  ),
                  sliderInput(
                    inputId = "r2",
-                   label = "r2 (m):",
+                   label = "Radius area 2 (m):",
                    min = 1500,
                    max = 2500,
                    value = 2000,
@@ -39,35 +39,35 @@ ui <- fluidPage(
                  
                  sliderInput(
                    inputId = "H1",
-                   label = "H1 (m):",
-                   min = -5,
-                   max = 5,
-                   value = 2,
+                   label = "Polder level area 1 (m):",
+                   min = 6,
+                   max = 14,
+                   value = 10,
                    step = .05,
                    width = '100%'
                  ),
                  sliderInput(
                    inputId = "H2",
-                   label = "H2 (m):",
-                   min = -5,
-                   max = 5,
-                   value = 1,
+                   label = "Polder level area 2 (m):",
+                   min = 5,
+                   max = 13,
+                   value = 9,
                    step = .05,
                    width = '100%'
                  ),
                  sliderInput(
                    inputId = "H3",
-                   label = "H3 (m):",
-                   min = -5,
-                   max = 5,
-                   value = 0,
+                   label = "Polder level area 3 (m):",
+                   min = 4,
+                   max = 12,
+                   value = 8,
                    step = .05,
                    width = '100%'
                  ),
                  
                  sliderInput(
                    inputId = "c1",
-                   label = "c1 (d):",
+                   label = "c area 1 (d):",
                    min = 500,
                    max = 1500,
                    value = 1000,
@@ -76,7 +76,7 @@ ui <- fluidPage(
                  ),
                  sliderInput(
                    inputId = "c2",
-                   label = "c2 (d):",
+                   label = "c area 2 (d):",
                    min = 1500,
                    max = 2500,
                    value = 2000,
@@ -85,7 +85,7 @@ ui <- fluidPage(
                  ),
                  sliderInput(
                    inputId = "c3",
-                   label = "c3 (d):",
+                   label = "c area 3 (d):",
                    min = 2500,
                    max = 3500,
                    value = 3000,
@@ -94,7 +94,7 @@ ui <- fluidPage(
                  ),
                  sliderInput(
                    inputId = "kD1",
-                   label = "kD1 (m2/d):",
+                   label = "kD area 1 (m2/d):",
                    min = 500,
                    max = 1500,
                    value = 1000,
@@ -103,7 +103,7 @@ ui <- fluidPage(
                  ),
                  sliderInput(
                    inputId = "kD2",
-                   label = "kD2 (m2/d):",
+                   label = "kD area 2 (m2/d):",
                    min = 500,
                    max = 1500,
                    value = 1000,
@@ -112,7 +112,7 @@ ui <- fluidPage(
                  ),
                  sliderInput(
                    inputId = "kD3",
-                   label = "kD3 (m2/d):",
+                   label = "kD area 3 (m2/d):",
                    min = 500,
                    max = 1500,
                    value = 1000,
@@ -128,7 +128,10 @@ ui <- fluidPage(
                    value = 4000,
                    step = 10,
                    width = '100%'
-                 )
+                 ),
+
+                checkboxInput("Labels", "Labels", value = TRUE)
+                                 
                ),
                
                mainPanel(
@@ -154,7 +157,7 @@ ui <- fluidPage(
                sidebarPanel(
                  sliderInput(
                    "r1range",
-                   label = "Range r1 (m)",
+                   label = "Range radius area 1 (m)",
                    min = 10,
                    max = 10000,
                    value = c(500, 1500),
@@ -163,7 +166,7 @@ ui <- fluidPage(
                  ),
                  sliderInput(
                    "r2range",
-                   label = "Range r2 (m)",
+                   label = "Range radius area 2 (m)",
                    min = 10,
                    max = 10000,
                    value = c(1500, 2500),
@@ -173,34 +176,34 @@ ui <- fluidPage(
                  
                  sliderInput(
                    "H1range",
-                   label = "Range H1 (m)",
+                   label = "Range polder level area 1 (m)",
                    min = -100,
                    max = 100,
-                   value = c(-5, 5),
+                   value = c(6, 14),
                    step = 1,
                    width = '100%'
                  ),
                  sliderInput(
                    "H2range",
-                   label = "Range H2 (m)",
+                   label = "Range polder level area 2 (m)",
                    min = -100,
                    max = 100,
-                   value = c(-5, 5),
+                   value = c(5, 13),
                    step = 1,
                    width = '100%'
                  ),
                  sliderInput(
                    "H3range",
-                   label = "Range H3 (d)",
+                   label = "Range polder level area 3 (d)",
                    min = -100,
                    max = 100,
-                   value = c(-5, 5),
+                   value = c(4, 12),
                    step = 1,
                    width = '100%'
                  ),
                  sliderInput(
                    "c1range",
-                   label = "Range c1 (d)",
+                   label = "Range c area 1 (d)",
                    min = 0.1,
                    max = 10000,
                    value = c(500, 1500),
@@ -209,7 +212,7 @@ ui <- fluidPage(
                  ),
                  sliderInput(
                    "c2range",
-                   label = "Range c2 (d)",
+                   label = "Range c area 2 (d)",
                    min = 0.1,
                    max = 10000,
                    value = c(1500, 2500),
@@ -218,7 +221,7 @@ ui <- fluidPage(
                  ),
                  sliderInput(
                    "c3range",
-                   label = "Range c3 (d)",
+                   label = "Range c area 3 (d)",
                    min = 0.1,
                    max = 10000,
                    value = c(2500, 3500),
@@ -227,7 +230,7 @@ ui <- fluidPage(
                  ),
                  sliderInput(
                    "kD1range",
-                   label = "Range kD1 (m2/d)",
+                   label = "Range kD area 1 (m2/d)",
                    min = 0.1,
                    max = 10000,
                    value = c(500, 1500),
@@ -236,7 +239,7 @@ ui <- fluidPage(
                  ),
                  sliderInput(
                    "kD2range",
-                   label = "Range kD2 (m2/d)",
+                   label = "Range kD area 2 (m2/d)",
                    min = 0.1,
                    max = 10000,
                    value = c(500, 1500),
@@ -245,7 +248,7 @@ ui <- fluidPage(
                  ),
                  sliderInput(
                    "kD3range",
-                   label = "Range kD3 (m2/d)",
+                   label = "Range kD area 3 (m2/d)",
                    min = 0.1,
                    max = 10000,
                    value = c(500, 1500),
@@ -349,9 +352,9 @@ ui <- fluidPage(
              )),
     tabPanel(title = "Output",
              mainPanel(tableOutput("model_data"))),
-    #tabPanel(title = "mmd",
-    #         mainPanel(tableOutput("mmd"))
-    #),
+    tabPanel(title = "mmd",
+             mainPanel(tableOutput("mmd"))
+    ),
     tabPanel(title = "Documentation",
              includeHTML("www/Rondo3.html"))
   )
@@ -672,6 +675,8 @@ server <- function(input, output, session) {
             quote = input$quote
         )
         df$observation <- TRUE #for plotting
+        df %<>% dplyr::rename(value=Head)
+        df$variable <- "Head"
         rv$observations <- df
     })
     
@@ -927,17 +932,17 @@ server <- function(input, output, session) {
         }
     })
     
-    graph_title <- reactive({
-        observation_filename() %>% sub(pattern = "(.*?)\\..*$",
-                                       replacement = "\\1",
-                                       basename(.))
-    })
+#    graph_title <- reactive({
+#        observation_filename() %>% sub(pattern = "(.*?)\\..*$",
+#                                       replacement = "\\1",
+#                                       basename(.))
+#    })
     
     melted_data <- reactive({
         md <- melted_model_data()
         if (observations_are_available()) {
             rv$observations <-
-                select(rv$observations, names(md))
+                dplyr::select(rv$observations, names(md))
             md <-
                 rbind(md, rv$observations) #Combine observations with model output for plot
         }
@@ -946,7 +951,7 @@ server <- function(input, output, session) {
     
     
     output$mmd <- renderTable({
-        melted_model_data()
+       melted_model_data()
     })
     
     plt <- reactive({
@@ -975,20 +980,20 @@ server <- function(input, output, session) {
             ylab("Head (m+ref)")
         if (observations_are_available()) {
             .data <- melted_data() %>% filter(observation == TRUE)
-            plt <- plt + geom_point(data = .data, size = 3) +
-                ggtitle(graph_title())
-            if (input$Labels) {
-                plt <-
-                    plt + ggrepel::geom_label_repel(
-                        aes(label = ifelse(
-                            observation == TRUE, location, ""
-                        )),
-                        box.padding   = 0.35,
-                        point.padding = 0.5,
-                        segment.color = 'grey50',
-                        show.legend = FALSE
-                    )
-            }
+            plt <- plt + geom_point(data = .data, aes(x=x, y=value), size = 3) 
+               # + ggtitle(graph_title())
+             if (input$Labels) {
+                 plt <-
+                     plt + ggrepel::geom_label_repel( data=.data,
+                         aes(label = ifelse(
+                             observation == TRUE, location, ""
+                         ), x=x, y=value),
+                         box.padding   = 0.35,
+                         point.padding = 0.5,
+                         segment.color = 'grey50',
+                         show.legend = FALSE
+                     )
+             }
         }
         return(plt)
     })
