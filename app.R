@@ -152,6 +152,8 @@ ui <- fluidPage(
                  # )
                )
              )),
+    tabPanel(title = "Output",
+             mainPanel(tableOutput("model_data"))),
     tabPanel(title = "Ranges",
              sidebarLayout(
                sidebarPanel(
@@ -350,11 +352,9 @@ ui <- fluidPage(
                mainPanel(# Output: Data file ----
                          tableOutput("contents"))
              )),
-    tabPanel(title = "Output",
-             mainPanel(tableOutput("model_data"))),
-    tabPanel(title = "mmd",
-             mainPanel(tableOutput("mmd"))
-    ),
+    #tabPanel(title = "mmd",
+    #         mainPanel(tableOutput("mmd"))
+    #),
     tabPanel(title = "Documentation",
              includeHTML("www/Rondo3.html"))
   )
