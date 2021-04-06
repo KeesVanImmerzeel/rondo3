@@ -1,0 +1,12 @@
+name: Rondo3
+title: Rondo3
+username:
+account: sweco
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3916956
+bundleId: 4437371
+url: https://sweco.shinyapps.io/Rondo3/
+when: 1617715337.65351
+asMultiple: FALSE
+asStatic: FALSE
