@@ -9,7 +9,7 @@ In the app Rondo3 two circular shaped polders are defined. The resulting heads i
 
 An R-package (see below) may be used in case more polders should be taken into account.In that case, you need to create an R-script.
 
-![](https://user-images.githubusercontent.com/16401251/113697536-99f26e80-96d3-11eb-90d4-24ea8ef2cac3.PNG)
+![](https://user-images.githubusercontent.com/16401251/113734274-7e9b5980-96fb-11eb-910d-4ddab96cf72b.PNG)
 ![](https://user-images.githubusercontent.com/16401251/113697604-b55d7980-96d3-11eb-8f54-93049840d2d8.PNG)
 ![](https://user-images.githubusercontent.com/16401251/113697646-c5755900-96d3-11eb-8b47-5033a3722d09.PNG)
 
